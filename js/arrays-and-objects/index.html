@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays and Objects</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        const arr = [1, 2, 3, 4];
+
+        console.log('-----forEach------');
+
+        arr.forEach((value, index, arr) => {
+            console.log(value, index, arr);
+        })
+
+        console.log('-----map------');
+
+        arr.map((value, index, arr) => {
+            console.log(value, index, arr);
+            return value + index;
+        });
+
+        // в map можно положить return, а так же результат метода можно положить в новый массив
+        // map возвращает новый массив
+    </script>
+
+
+
+</body>
+
+</html>
