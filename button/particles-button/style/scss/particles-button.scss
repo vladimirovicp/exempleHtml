@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+$button: #332a49;
+$white: #ffffff;
+$font: "Poppins", sans-serif;
+@function randomValue($min, $max) {
+  @return random($max) + $min;
+}
+body {
+  background-color: $white;
+  font-family: $font;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.particles-btn {
+  position: relative;
+  outline: 0;
+  font-family: $font;
+  background-color: $button;
+  font-size: 20px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 4px;
+  color: $white;
+  box-shadow: 0px 2px 10px lighten($button, 20%);
+  top: -4px;
+  transition: all ease 0.2s;
+  &:hover {
+    background-color: darken($button, 5%);
+    cursor: pointer;
+  }
+  &:active {
+    background-color: darken($button, 5%);
+    top: 4px;
+  }
+  .particle {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    margin: auto;
+    z-index: -2;
+    border-radius: 400px;
+    opacity: 0;
+  }
+  @for $i from 1 through 400 {
+    .particle:nth-child(#{$i}) {
+      $value: #{randomValue(5, 10)}px;
+      height: $value;
+      width: $value;
+      opacity: 1;
+      @if ($i % 2 == 0) {
+        background-color: lighten($button, 10%);
+      } @else {
+        border: #{random(2)}px solid lighten($button, 20%);
+      }
+    }
+  }
+}
+
+
+.inspired{
+  position:absolute;
+  bottom: 0;
+  width:100%;
+  text-align:center;
+  background-color: $button;
+  padding:10px;
+  border-radius:5px;
+  color:$white;
+  font-size:12px;
+  a{
+    text-decoration:none;
+    font-weight:bold;
+    color:$white;
+  }
+}
+
+.youtube{
+  position:absolute;
+  top:10px;
+  right: 10px;
+  background-color: $button;
+  padding:10px;
+  border-radius:5px;
+  font-weight:600;
+  a{
+    color:$white;
+    text-decoration:none;
+  }
+  
+}
