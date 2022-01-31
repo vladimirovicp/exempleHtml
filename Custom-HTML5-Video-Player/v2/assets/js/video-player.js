@@ -31,7 +31,7 @@ const videoWorks = !!document.createElement('video').canPlayType;
 // что видео HTML5 поддерживается, поэтому элементы управления по умолчанию быстро отключаются в пользу наших пользовательских элементов управления.
 
 if (videoWorks) {
-    player.controls = false;
+    playerVideo.controls = false;
     layerControls.classList.remove('hidden');
 }
 
