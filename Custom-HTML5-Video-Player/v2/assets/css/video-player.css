@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 320px;
+    min-width: 1240px;
     min-height: 100vh;
     background-color: #000;
     font-family: "Inter", sans-serif;
@@ -31,7 +31,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none!important;
 }
 
 
@@ -74,6 +74,7 @@ body {
     border: none;
     outline: none;
     background-color: transparent;
+    padding-right: 5px;
 }
 
 .layer__controls {
@@ -129,6 +130,7 @@ body {
     background: rgba(200, 200, 200, 0.5);
     cursor: ew-resize;
     height: 15px;
+    margin-bottom: 5px;
 }
 
 .progress__filed {
@@ -143,8 +145,31 @@ body {
     align-items: center;
 }
 
+.player__slider{
+    margin-right: 10px;
+    
+}
+
+
 .right-controls {
     margin-left: auto;
     display: flex;
     align-items: center;
+}
+
+.play-btn {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 3;
+    background-image: url(../img/svg/play-btn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.play-btn:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }

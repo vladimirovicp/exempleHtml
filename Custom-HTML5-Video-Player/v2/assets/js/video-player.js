@@ -32,6 +32,17 @@ const volumeMute = volumeButton.querySelector('use[href="#volume-mute"]');
 const volumeLow = volumeButton.querySelector('use[href="#volume-low"]');
 const volumeHigh = volumeButton.querySelector('use[href="#volume-high"]');
 
+const fullscreenButton = document.getElementById('fullscreen-button');
+//const videoContainer = document.getElementById('video-container');
+
+const videoContainer = player;
+
+const fullscreenIcons = fullscreenButton.querySelectorAll('use');
+
+const playBtn = player.querySelector('.play-btn');
+
+// console.log(fullscreenButton);
+// console.log(fullscreenButton.querySelectorAll('use'));
 
 // console.log(volume)
 
@@ -48,7 +59,7 @@ const videoWorks = !!document.createElement('video').canPlayType;
 
 if (videoWorks) {
     playerVideo.controls = false;
-    layerControls.classList.remove('hidden');
+    // layerControls.classList.remove('hidden');
 }
 
 
@@ -58,6 +69,7 @@ if (videoWorks) {
 function togglePlay() {
     const method = video.paused ? 'play' : 'pause';
     video[method]();
+    playBtn.classList.toggle('hidden');
 }
 
 function updateButton() {
@@ -170,6 +182,34 @@ function toggleMute() {
     }
 }
 
+function toggleFullScreen() {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else if (document.webkitFullscreenElement) {
+      // Need this to support Safari
+      document.webkitExitFullscreen();
+    } else if (videoContainer.webkitRequestFullscreen) {
+      // Need this to support Safari
+      videoContainer.webkitRequestFullscreen();
+    } else {
+      videoContainer.requestFullscreen();
+    }
+
+    fullscreenIcons.forEach(icon => icon.classList.toggle('hidden'));
+  }
+
+  function updateFullscreenButton() {
+      /*console.log('123');*/
+    fullscreenIcons.forEach(icon => icon.classList.toggle('hidden'));
+  }
+
+
+  function togglPlayBtn(){
+    video.play();
+    playBtn.classList.add('hidden');
+    layerControls.classList.remove('hidden');
+  }
+
 // /* Включим */
 
 video.addEventListener('click', togglePlay);
@@ -199,3 +239,9 @@ video.addEventListener('volumechange', updateVolumeIcon);
 volume.addEventListener('input', updateVolume);
 video.addEventListener('volumechange', updateVolumeIcon);
 volumeButton.addEventListener('click', toggleMute);
+
+fullscreenButton.onclick = toggleFullScreen;
+videoContainer.addEventListener('fullscreenchange', updateFullscreenButton);
+
+
+playBtn.addEventListener('click', togglPlayBtn);
