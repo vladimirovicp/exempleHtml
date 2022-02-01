@@ -1,103 +1,150 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  line-height: 2;
-  color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    color: #fff;
 }
 
 .container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .center-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.player {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1400px;
-  height: calc(46% + 60px);
-  max-height: 705px;
-}
-
-.player button {
-  cursor: pointer;
-  position: relative;
-  margin-right: 7px;
-  font-size: 12px;
-  padding: 3px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-.player svg {
-  width: 28px;
-  height: 28px;
-  fill: #fff;
-  stroke: #fff;
-  cursor: pointer;
-}
-
-/* .play-btn {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  z-index: 3;
-  background-image: url(../img/svg/play-btn.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.play-btn:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
-} */
-
-.viewer {
-  width: calc(100% - 2px);
-  height: auto;
-  border: 1px solid #bdae82;
-  border-bottom: 0;
-}
-
-.layer__controls {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: calc(100% + 2px);
-  height: 60px;
-  padding: 0 20px;
-  background-color: #000000;
-  border: 1pxsolid #bdae82;
-  border-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .hidden {
-  display: none;
+    display: none;
+}
+
+
+/* .player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: calc(46% + 60px);
+    max-height: 705px;
+} */
+
+.viewer {
+    width: calc(100% + 2px);
+    height: auto;
+    border: 1px solid #bdae82;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    /* height: calc(46% + 60px);
+    max-height: 705px; */
+}
+
+.player button {
+    cursor: pointer;
+    position: relative;
+    margin-right: 7px;
+    font-size: 12px;
+    padding: 3px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.layer__controls {
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100% + 2px);
+    height: 60px;
+    padding: 0 20px;
+    background-color: #000000;
+    border: 1px solid #bdae82;
+    border-top: 0; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 1px;
+    width: calc(100% - 2px);
+    transition: all 0.2s ease;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+.player .layer__controls svg {
+    width: 28px;
+    height: 28px;
+    fill: #b3b3b3;
+    stroke: #b3b3b3;
+    cursor: pointer;
+}
+
+.player .layer__controls svg:hover {
+    fill: #bdae82;
+}
+
+
+/* .progress {
+    position: relative;
+    height: 8.4px;
+    margin-bottom: 10px;
+}
+
+.progress__filed {} */
+
+.progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    transition: height 0.3s;
+    background: rgba(200, 200, 200, 0.5);
+    cursor: ew-resize;
+    height: 15px;
+}
+
+.progress__filed {
+    width: 50%;
+    background-color: #ffc600;
+    flex: 0;
+    flex-basis: 0%;
+}
+
+.volume-controls {
+    display: flex;
+    align-items: center;
+}
+
+.right-controls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }

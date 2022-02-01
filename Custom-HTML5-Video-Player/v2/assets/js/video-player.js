@@ -7,17 +7,33 @@ const layerControls = player.querySelector('.layer__controls');
 
 const video = player.querySelector('.viewer');
 
-// const progress = player.querySelector('.progress');
-// const progressBar = player.querySelector('.progress__filed');
+const playbackIcons = player.querySelectorAll('.playback-icons use');
+
+const progress = player.querySelector('.progress');
+const progressBar = player.querySelector('.progress__filed');
 
 const toggle = player.querySelector('.toggle');
 
-console.log(video)
+//console.log(video)
 
-// const skipButton = player.querySelectorAll('[data-skip]')
-// const ranges = player.querySelectorAll('.player__slider')
+const skipButton = player.querySelectorAll('[data-skip]')
+    // const ranges = player.querySelectorAll('.player__slider')
 
 
+const timeElapsed = player.querySelector('#time-elapsed');
+const duration = player.querySelector('#duration');
+
+const volumeButton = player.querySelector('#volume-button');
+const volumeControls = player.querySelector('.volume-controls');
+const volume = volumeControls.querySelector('.volume');
+const volumeIcons = volumeButton.querySelectorAll('.volume-button use');
+
+const volumeMute = volumeButton.querySelector('use[href="#volume-mute"]');
+const volumeLow = volumeButton.querySelector('use[href="#volume-low"]');
+const volumeHigh = volumeButton.querySelector('use[href="#volume-high"]');
+
+
+// console.log(volume)
 
 // Скрыть собственные элементы управления
 // Первое, что нам нужно сделать, это скрыть элементы управления видео по умолчанию и предоставить наш собственный интерфейс, 
@@ -40,60 +56,146 @@ if (videoWorks) {
 // /* Посмтроить функции */
 
 function togglePlay() {
-
-    console.log('123')
     const method = video.paused ? 'play' : 'pause';
     video[method]();
 }
 
-// function updateButton(){
-//     const icon = this.paused ? '►' : '❚ ❚';
-//     toggle.textContent = icon;
-// }
+function updateButton() {
+    playbackIcons.forEach((icon) => icon.classList.toggle('hidden'));
+}
 
-// function skip(){
+// function skip() {
 //     //console.log(this.dataset.skip)
 //     video.currentTime += parseFloat(this.dataset.skip);
 // }
 
-// function handleRangeUpdate(){
+// function handleRangeUpdate() {
 //     // console.log(this.name)
 //     // console.log(this.value)
 //     video[this.name] = this.value;
 // }
 
-// // обрабатываем прогресс
-// function handleProgress(){
-//     const percent = (video.currentTime / video.duration) * 100;
-//     progressBar.style.flexBasis = `${percent}%`;
-// }
+// обрабатываем прогресс
+function handleProgress() {
+    const percent = (video.currentTime / video.duration) * 100;
+    progressBar.style.flexBasis = `${percent}%`;
+}
 
-// function scrub(e){
+function scrub(e) {
 
-//     const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
-//     video.currentTime = scrubTime;
+    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+    video.currentTime = scrubTime;
 
-// }
+}
 
+
+function formatTime(timeInSeconds) {
+    // const result = new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
+
+    const result = new Date(timeInSeconds * 1000).toISOString().substring(11, 19);
+
+
+    return {
+        minutes: result.substring(3, 5),
+        seconds: result.substring(6, 8),
+    };
+};
+
+function initializeVideo() {
+    const videoDuration = Math.round(video.duration);
+    const time = formatTime(videoDuration);
+    duration.innerText = `${time.minutes}:${time.seconds}`;
+    duration.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
+}
+
+//обновим время, прошедшее с момента
+function updateTimeElapsed() {
+    const time = formatTime(Math.round(video.currentTime));
+    timeElapsed.innerText = `${time.minutes}:${time.seconds}`;
+    timeElapsed.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
+}
+
+
+function updateVolume() {
+    if (video.muted) {
+        video.muted = false;
+    }
+
+    video.volume = volume.value;
+}
+
+function updateVolumeIcon() {
+    volumeIcons.forEach(icon => {
+        icon.classList.add('hidden');
+    });
+
+    //volumeButton.setAttribute('data-title', 'Mute (m)')
+
+    if (video.muted || video.volume === 0) {
+        volumeMute.classList.remove('hidden');
+        //volumeButton.setAttribute('data-title', 'Unmute (m)')
+    } else if (video.volume > 0 && video.volume <= 0.5) {
+        volumeLow.classList.remove('hidden');
+    } else {
+        volumeHigh.classList.remove('hidden');
+    }
+}
+
+
+function updateVolumeIcon() {
+    volumeIcons.forEach(icon => {
+        icon.classList.add('hidden');
+    });
+
+    volumeButton.setAttribute('data-title', 'Mute (m)')
+
+    if (video.muted || video.volume === 0) {
+        volumeMute.classList.remove('hidden');
+        volumeButton.setAttribute('data-title', 'Unmute (m)')
+    } else if (video.volume > 0 && video.volume <= 0.5) {
+        volumeLow.classList.remove('hidden');
+    } else {
+        volumeHigh.classList.remove('hidden');
+    }
+}
+
+function toggleMute() {
+    video.muted = !video.muted;
+
+    if (video.muted) {
+        volume.setAttribute('data-volume', volume.value);
+        volume.value = 0;
+    } else {
+        volume.value = volume.dataset.volume;
+    }
+}
 
 // /* Включим */
 
 video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
 
-// video.addEventListener('play', updateButton);
-// video.addEventListener('pause', updateButton);
 // //слушаем событие обновление времени
-// video.addEventListener('timeupdate', handleProgress);
+video.addEventListener('timeupdate', handleProgress);
 
 toggle.addEventListener('click', togglePlay);
 
 // skipButton.forEach(skipButton => skipButton.addEventListener('click', skip));
-// ranges.forEach(range => range.addEventListener('change',handleRangeUpdate));
-// ranges.forEach(range => range.addEventListener('mousemove',handleRangeUpdate));
+// ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
+// ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
 
-// let mousedown = false;
-// progress.addEventListener('click',scrub);
+let mousedown = false;
+progress.addEventListener('click', scrub);
 
-// progress.addEventListener('mousedown', (e) => mousedown && scrub(e));
-// progress.addEventListener('mousedown', () => mousedown = true);
-// progress.addEventListener('mouseup', () => mousedown = false);
+progress.addEventListener('mousedown', (e) => mousedown && scrub(e));
+progress.addEventListener('mousedown', () => mousedown = true);
+progress.addEventListener('mouseup', () => mousedown = false);
+
+
+video.addEventListener('loadedmetadata', initializeVideo);
+video.addEventListener('timeupdate', updateTimeElapsed);
+video.addEventListener('volumechange', updateVolumeIcon);
+volume.addEventListener('input', updateVolume);
+video.addEventListener('volumechange', updateVolumeIcon);
+volumeButton.addEventListener('click', toggleMute);

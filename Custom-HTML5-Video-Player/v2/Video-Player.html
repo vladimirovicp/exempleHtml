@@ -16,7 +16,8 @@
         <div class="center-content">
 
             <div class="player">
-                <video controls class="player__video viewer" preload="metadata" poster="./assets/img/video-player.jpg">
+                <!-- poster="./assets/img/video-player.jpg" -->
+                <video controls class="player__video viewer" preload="metadata">
                     <source src="https://custom-video.netlify.app/assets/video/video.mp4" type="video/mp4">
                     </source>
                 </video>
@@ -37,21 +38,40 @@
                     </button>
 
                     <div class="volume-controls">
-                        <button data-title="Mute (m)" class="volume-button" id="volume-button">
+                        <button class="volume-button" id="volume-button">
                             <svg>
                                 <use class="hidden" href="#volume-mute"></use>
                                 <use class="hidden" href="#volume-low"></use>
                                 <use href="#volume-high"></use>
                             </svg>
                         </button>
-                        <input type="range" name='volume' class="player__slider" min="0" max="1" step="0.05" value="1">
+                        <input type="range" name='volume' class="player__slider volume" min="0" max="1" step="0.05" value="1">
+                    </div>
+
+                    <div class="time">
+                        <time id="time-elapsed">00:00</time>
+                        <span> / </span>
+                        <time id="duration">00:00</time>
+                    </div>
+
+                    <div class="right-controls">
+                        <button data-title="PIP (p)" class="pip-button" id="pip-button">
+                          <svg>
+                            <use href="#pip"></use>
+                          </svg>
+                        </button>
+                        <button data-title="Full screen (f)" class="fullscreen-button" id="fullscreen-button">
+                          <svg>
+                            <use href="#fullscreen"></use>
+                            <use href="#fullscreen-exit" class="hidden"></use>
+                          </svg>
+                        </button>
                     </div>
 
 
-                    <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1"
-                        value="1">
+                    <!-- <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
                     <button data-skip="-10" class="player__button">10s</button>
-                    <button data-skip="25" class="player__button">25s</button>
+                    <button data-skip="25" class="player__button">25s</button> -->
 
                 </div>
 
