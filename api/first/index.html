@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const url = 'https://type.fit/api/quotes';
+
+        console.log(url);
+
+        // XMLHttpRequest
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+        xhr.send();
+        xhr.addEventListener('load', () => {
+            if (xhr.status === 200) {
+                let data = JSON.parse(xhr.response);
+                console.log(data);
+            }
+        });
+
+        // Fetch
+
+        function getData() {
+            fetch(url)
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                });
+        }
+        getData();
+
+        // async/await
+
+        async function getData() {
+            const res = await fetch(url);
+            const data = await res.json();
+            console.log(data);
+        }
+        getData();
+
+
+        //API с цитатами
+
+       //https://api.icndb.com/jokes
+        //https://type.fit/api/quotes
+
+        //https://github.com/rolling-scopes-school/file-storage/blob/random-jokes/quotes.json
+
+        
+
+    </script>
+
+</body>
+
+</html>
