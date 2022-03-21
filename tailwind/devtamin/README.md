@@ -10,3 +10,7 @@
 * npx tailwindcss init
 * Делаем по документации https://tailwindcss.com/docs/installation
 * Запуск npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+
+## Выполнено по урокам
+* Tailwind CSS V3 - EP.2 Create a Navbar and add Font https://www.youtube.com/watch?v=wWcozB0cAak
