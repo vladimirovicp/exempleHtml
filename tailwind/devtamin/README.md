@@ -15,3 +15,4 @@
 ## Выполнено по урокам
 * Tailwind CSS V3 - EP.2 Create a Navbar and add Font | https://www.youtube.com/watch?v=wWcozB0cAak
 * Tailwind CSS V3 - EP.3 Create a Banner Section | https://www.youtube.com/watch?v=kqqqc0Qptuw
+* Tailwind CSS V3 - EP.4 Create a Tailwind Card (Latest Courses Section) https://www.youtube.com/watch?v=sTVj7wEQB7I
