@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS type test</title>
+</head>
+<body>
+
+<h1>JS type test</h1>
+
+<h2>What is the result of: Boolean('0')?</h2>
+<div id="answer01"></div>
+<script>
+    let boolean = true;
+    boolean = 0;
+
+    // if (boolean){
+    //     console.log(true);
+    // } else {
+    //     console.log(false);
+    // }
+    //console.log(boolean);
+    document.getElementById("answer01").textContent = boolean;
+</script>
+
+<h2>What is the result of: typeof Math?</h2>
+<div id="answer02"></div>
+<script>
+
+    let result =  typeof Math.abs(10);
+
+    document.getElementById("answer02").textContent = result;
+</script>
+
+<h2>What is the result of: '80' + 71.2?</h2>
+<div id="answer03"></div>
+<script>
+    document.getElementById("answer03").textContent = '80' + 71.2 + ' | ' + typeof ('80' + 71.2) ;
+</script>
+
+<h2>What is the result of: 12 && '12'?</h2>
+<div id="answer04"></div>
+<script>
+    document.getElementById("answer04").textContent = 12 && '12' + ' | ' + typeof(12 && '12') ;
+</script>
+
+<h2>What is the result of: 0 || 1 && 2 || 3?</h2>
+<div id="answer05"></div>
+<script>
+    let result5 =  (0 || 1 && 2 || 3);
+    console.log((0 || 1 && 2 || 3));
+    console.log(result5);
+
+    document.getElementById("answer05").textContent =  result5 + ' | ' + typeof(result5);
+</script>
+
+<h2>What is the result of: 0 && '' || []?</h2>
+<div id="answer06"></div>
+<script>
+    let result6 =  0 && '' || [];
+
+    document.getElementById("answer06").textContent = result6 + ' | ' + typeof(result6);
+</script>
+
+What is the result of: 0 && '' || []?
+0
+''
+[]
+false
+true
+'0'
+
+
+What is the result of: true+'hello'?
+NaN
+true
+false
+'1hello'
+'hello'
+'truehello'
+What is the result of: 1.15 + 2.30?
+345
+3.45
+3,45
+115230
+'115230'
+'345'
+none of them
+What is the result of: typeof 1n?
+'bigInt'
+'string'
+'number'
+'NaN'
+'symbol'
+What is the result of: null===undefined?
+null
+undefined
+true
+false
+What is the result of: typeof typeof (function(){})()?
+NaN
+true
+false
+undefined
+object
+null
+'string'
+let v = (!!'0'); console.log(v); What console will print?
+null
+undefined
+true
+false
+What is the result of: '6' * '3'?
+NaN
+true
+18
+'18'
+63
+'63'
+What is the result of: typeof(null + 40)?
+NaN
+true
+false
+'undefined'
+'object'
+'null'
+'number'
+'string'
+What is the result of: null==undefined?
+null
+undefined
+true
+false
+What is the result of: 0 && '' && []?
+undefined
+[]
+''
+0
+false
+true
+'0'
+Choose all falsy values:
+''
+0
+{}
+undefined
+null
+false
+NaN
+[]
+What is the result of: isNaN('')?
+NaN
+true
+false
+undefined
+'object'
+null
+What is the result of: typeof function(){}?
+'callback'
+'undefined'
+'method'
+'function'
+'object'
+[object Object]
+What is the result of: Boolean('0')==Boolean(0)?
+NaN
+true
+false
+undefined
+'object'
+null
+'string'
+What is the result of: typeof alert?
+'function'
+'string'
+'number'
+'undefined'
+'object'
+[object Object]
+'null'
+Which of the following is NOT a data type in JS?
+number
+NaN
+string
+symbol
+bigInt
+What is the result of: typeof Symbol('JS')?
+'function'
+'symbol'
+'string'
+'undefined'
+'null'
+What is the result of: typeof Infinity?
+'string'
+'object'
+'NaN'
+'undefined'
+'number'
+What is the result of: 22 - '1'?
+221
+21
+'221'
+'21'
+NaN
+What is the result of: '123' == 123?
+null
+undefined
+true
+false
+What is the result of: typeof null?
+'string'
+'number'
+'undefined'
+'object'
+[object Object]
+'null'
+What is the result of: {}=={}?
+null
+undefined
+true
+false
+What is the result of: 2 + '2'?
+4
+'4'
+'22'
+22
+NaN
+What is the result of: typeof (function(){})()?
+'callback'
+'undefined'
+'method'
+'function'
+'object'
+[object Object]
+What is the result of: true-'hello'?
+NaN
+true
+false
+'1hello'
+'hello'
+'truehello'
+
+
+</body>
+</html>
