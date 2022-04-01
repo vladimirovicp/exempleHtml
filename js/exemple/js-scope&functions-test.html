@@ -30,12 +30,13 @@
         //let f = new Function("a", "b", "return a+b")
         //+
 
-        //let f = (a, b) => a + b
+        let f = (a, b) => a + b
         //+
 
-        let f = (a, b) => {
-            a + b
-        }
+        // let f = (a, b) => {
+        //     a + b
+        // }
+        //- 
 
         let result01 = f(a, b);
 
@@ -46,10 +47,21 @@
         document.getElementById("answer01").textContent = result01;
     </script>
 
-    <h2>???</h2>
+    <h2>Что будет выведено в консоль?</h2>
     <div id="answer02"></div>
     <script>
-        let result02 = "???";
+        "use strict";
+
+        const details = {
+            message: 'Hello!',
+        }
+
+        function getMessage() {
+            return this.message;
+        }
+
+        console.log(getMessage.call(details));
+        let result02 = getMessage.call(details);
         document.getElementById("answer02").textContent = result02;
     </script>
 
@@ -72,7 +84,7 @@
     <script>
         let result5 = "???";
 
-        document.getElementById("answer05").textContent = result5 + ' | ' + typeof(result5);
+        document.getElementById("answer05").textContent = result5 + ' | ' + typeof (result5);
     </script>
 
     <h2>???</h2>
@@ -80,57 +92,55 @@
     <script>
         let result6 = 0 && '' || [];
 
-        document.getElementById("answer06").textContent = result6 + ' | ' + typeof(result6);
+        document.getElementById("answer06").textContent = result6 + ' | ' + typeof (result6);
     </script>
 
     <h2>???</h2>
     <div id="answer07"></div>
     <script>
-        let result7 = true + 'hello';
+        let result7 = "???";
 
-        document.getElementById("answer07").textContent = result7 + ' | ' + typeof(result7);
+        document.getElementById("answer07").textContent = result7 + ' | ' + typeof (result7);
     </script>
 
     <h2>???</h2>
     <div id="answer08"></div>
     <script>
-        let result8 = 1.15 + 2.30;
+        let result8 = "???";
 
-        document.getElementById("answer08").textContent = result8 + ' | ' + typeof(result8);
+        document.getElementById("answer08").textContent = result8 + ' | ' + typeof (result8);
     </script>
 
     <h2>???</h2>
     <div id="answer09"></div>
     <script>
-        let result9 = 1 n;
+        let result9 = "???";
 
-        document.getElementById("answer09").textContent = result9 + ' | ' + typeof(result9);
+        document.getElementById("answer09").textContent = result9 + ' | ' + typeof (result9);
     </script>
 
     <h2>???</h2>
     <div id="answer10"></div>
     <script>
-        let result10 = null === undefined;
+        let result10 = "???";
 
-        document.getElementById("answer10").textContent = result10 + ' | ' + typeof(result10);
+        document.getElementById("answer10").textContent = result10 + ' | ' + typeof (result10);
     </script>
 
     <h2>???</h2>
     <div id="answer11"></div>
     <script>
-        let result11 = typeof typeof(function() {})();
+        let result11 = typeof typeof (function () { })();
 
-        document.getElementById("answer11").textContent = result11 + ' | ' + typeof(result11);
+        document.getElementById("answer11").textContent = result11 + ' | ' + typeof (result11);
     </script>
 
     <h2>???</h2>
     <div id="answer12"></div>
     <script>
-        let result12 = (!!'0');
-        let v = (!!'0');
-        console.log(v);
+        let result12 = "???";
 
-        document.getElementById("answer12").textContent = result12 + ' | ' + typeof(result12);
+        document.getElementById("answer12").textContent = result12 + ' | ' + typeof (result12);
     </script>
 
     <h2>???</h2>
@@ -138,7 +148,7 @@
     <script>
         let result13 = ('6' * '3');
 
-        document.getElementById("answer13").textContent = result13 + ' | ' + typeof(result13);
+        document.getElementById("answer13").textContent = result13 + ' | ' + typeof (result13);
     </script>
 
     <h2>???</h2>
@@ -146,7 +156,7 @@
     <script>
         let result14 = null + 40;
 
-        document.getElementById("answer14").textContent = result14 + ' | ' + typeof(result14);
+        document.getElementById("answer14").textContent = result14 + ' | ' + typeof (result14);
     </script>
 
     <h2>???</h2>
@@ -154,7 +164,7 @@
     <script>
         let result15 = null == undefined;
 
-        document.getElementById("answer15").textContent = result15 + ' | ' + typeof(result15);
+        document.getElementById("answer15").textContent = result15 + ' | ' + typeof (result15);
     </script>
 
     <h2>???</h2>
@@ -162,7 +172,7 @@
     <script>
         let result16 = 0 && '' && [];
 
-        document.getElementById("answer16").textContent = result16 + ' | ' + typeof(result16);
+        document.getElementById("answer16").textContent = result16 + ' | ' + typeof (result16);
     </script>
 
     <h2>???</h2>
@@ -186,15 +196,15 @@
     <script>
         let result18 = isNaN('');
 
-        document.getElementById("answer18").textContent = result18 + ' | ' + typeof(result18);
+        document.getElementById("answer18").textContent = result18 + ' | ' + typeof (result18);
     </script>
 
     <h2>???</h2>
     <div id="answer19"></div>
     <script>
-        let result19 = function() {};
+        let result19 = function () { };
 
-        document.getElementById("answer19").textContent = result19 + ' | ' + typeof(result19);
+        document.getElementById("answer19").textContent = result19 + ' | ' + typeof (result19);
     </script>
 
     <h2>???</h2>
@@ -202,7 +212,7 @@
     <script>
         let result20 = Boolean('0') == Boolean(0);
 
-        document.getElementById("answer20").textContent = result20 + ' | ' + typeof(result20);
+        document.getElementById("answer20").textContent = result20 + ' | ' + typeof (result20);
     </script>
 
     <h2>???</h2>
@@ -210,7 +220,7 @@
     <script>
         let result21 = alert;
 
-        document.getElementById("answer21").textContent = result21 + ' | ' + typeof(result21);
+        document.getElementById("answer21").textContent = result21 + ' | ' + typeof (result21);
     </script>
 
     <h2>???</h2>
@@ -232,10 +242,9 @@
     <h2>???</h2>
     <div id="answer24"></div>
     <script>
-        let result24 = Symbol('JS');
+        let result24 = "???";
 
-        console.log(result24);
-        console.log(typeof(result24))
+
 
         //document.getElementById("answer24").textContent = result24 + ' | ' + typeof(result24);
     </script>
@@ -245,7 +254,7 @@
     <script>
         let result25 = Infinity;
 
-        document.getElementById("answer25").textContent = result25 + ' | ' + typeof(result25);
+        document.getElementById("answer25").textContent = result25 + ' | ' + typeof (result25);
     </script>
 
 
@@ -254,7 +263,7 @@
     <script>
         let result26 = 22 - '1';
 
-        document.getElementById("answer26").textContent = result26 + ' | ' + typeof(result26);
+        document.getElementById("answer26").textContent = result26 + ' | ' + typeof (result26);
     </script>
 
     <h2>???</h2>
@@ -262,7 +271,7 @@
     <script>
         let result27 = '123' == 123;
 
-        document.getElementById("answer27").textContent = result27 + ' | ' + typeof(result27);
+        document.getElementById("answer27").textContent = result27 + ' | ' + typeof (result27);
     </script>
 
     <h2>???</h2>
@@ -270,7 +279,7 @@
     <script>
         let result28 = null;
 
-        document.getElementById("answer28").textContent = result28 + ' | ' + typeof(result28);
+        document.getElementById("answer28").textContent = result28 + ' | ' + typeof (result28);
     </script>
 
     <h2>???</h2>
@@ -278,7 +287,7 @@
     <script>
         let result29 = {} == {};
 
-        document.getElementById("answer29").textContent = result29 + ' | ' + typeof(result29);
+        document.getElementById("answer29").textContent = result29 + ' | ' + typeof (result29);
     </script>
 
     <h2>???</h2>
@@ -286,15 +295,15 @@
     <script>
         let result30 = 2 + '2';
 
-        document.getElementById("answer30").textContent = result30 + ' | ' + typeof(result30);
+        document.getElementById("answer30").textContent = result30 + ' | ' + typeof (result30);
     </script>
 
     <h2>???</h2>
     <div id="answer31"></div>
     <script>
-        let result31 = typeof(function() {})();
+        let result31 = typeof (function () { })();
 
-        document.getElementById("answer31").textContent = result31 + ' | ' + typeof(result31);
+        document.getElementById("answer31").textContent = result31 + ' | ' + typeof (result31);
     </script>
 
     <h2>???</h2>
@@ -302,7 +311,7 @@
     <script>
         let result32 = true - 'hello';
 
-        document.getElementById("answer32").textContent = result32 + ' | ' + typeof(result32);
+        document.getElementById("answer32").textContent = result32 + ' | ' + typeof (result32);
     </script>
 
 
@@ -311,7 +320,7 @@
     <script>
         let result33 = '???';
 
-        document.getElementById("answer33").textContent = result33 + ' | ' + typeof(result33);
+        document.getElementById("answer33").textContent = result33 + ' | ' + typeof (result33);
     </script>
 
     <h2>???</h2>
@@ -319,7 +328,7 @@
     <script>
         let result34 = '???';
 
-        document.getElementById("answer34").textContent = result34 + ' | ' + typeof(result34);
+        document.getElementById("answer34").textContent = result34 + ' | ' + typeof (result34);
     </script>
 
     <h2>???</h2>
@@ -327,7 +336,7 @@
     <script>
         let result35 = '???';
 
-        document.getElementById("answer35").textContent = result35 + ' | ' + typeof(result35);
+        document.getElementById("answer35").textContent = result35 + ' | ' + typeof (result35);
     </script>
 
     <h2>???</h2>
@@ -335,7 +344,7 @@
     <script>
         let result36 = '???';
 
-        document.getElementById("answer36").textContent = result36 + ' | ' + typeof(result36);
+        document.getElementById("answer36").textContent = result36 + ' | ' + typeof (result36);
     </script>
 
     <h2>???</h2>
@@ -343,7 +352,7 @@
     <script>
         let result37 = '???';
 
-        document.getElementById("answer37").textContent = result37 + ' | ' + typeof(result37);
+        document.getElementById("answer37").textContent = result37 + ' | ' + typeof (result37);
     </script>
 
     <h2>???</h2>
@@ -351,7 +360,7 @@
     <script>
         let result38 = '???';
 
-        document.getElementById("answer38").textContent = result38 + ' | ' + typeof(result38);
+        document.getElementById("answer38").textContent = result38 + ' | ' + typeof (result38);
     </script>
 
 </body>
