@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Scope & Functions Test</title>
+</head>
+
+<body>
+
+    <h1>JS Scope & Functions Test</h1>
+
+    <h2>???</h2>
+    <div id="answer01"></div>
+    <script>
+    </script>
+
+    <h2>???</h2>
+    <div id="answer02"></div>
+    <script>
+        let result02 = "???";
+        document.getElementById("answer02").textContent = result02;
+    </script>
+
+    <h2>???</h2>
+    <div id="answer03"></div>
+    <script>
+        let result03 = "???";
+        document.getElementById("answer03").textContent = result03;
+    </script>
+
+    <h2>???</h2>
+    <div id="answer04"></div>
+    <script>
+        let result04 = "???";
+        document.getElementById("answer04").textContent = result04;
+    </script>
+
+    <h2>???</h2>
+    <div id="answer05"></div>
+    <script>
+        let result5 = "???";
+
+        document.getElementById("answer05").textContent = result5 + ' | ' + typeof(result5);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer06"></div>
+    <script>
+        let result6 = 0 && '' || [];
+
+        document.getElementById("answer06").textContent = result6 + ' | ' + typeof(result6);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer07"></div>
+    <script>
+        let result7 = true + 'hello';
+
+        document.getElementById("answer07").textContent = result7 + ' | ' + typeof(result7);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer08"></div>
+    <script>
+        let result8 = 1.15 + 2.30;
+
+        document.getElementById("answer08").textContent = result8 + ' | ' + typeof(result8);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer09"></div>
+    <script>
+        let result9 = 1 n;
+
+        document.getElementById("answer09").textContent = result9 + ' | ' + typeof(result9);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer10"></div>
+    <script>
+        let result10 = null === undefined;
+
+        document.getElementById("answer10").textContent = result10 + ' | ' + typeof(result10);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer11"></div>
+    <script>
+        let result11 = typeof typeof(function() {})();
+
+        document.getElementById("answer11").textContent = result11 + ' | ' + typeof(result11);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer12"></div>
+    <script>
+        let result12 = (!!'0');
+        let v = (!!'0');
+        console.log(v);
+
+        document.getElementById("answer12").textContent = result12 + ' | ' + typeof(result12);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer13"></div>
+    <script>
+        let result13 = ('6' * '3');
+
+        document.getElementById("answer13").textContent = result13 + ' | ' + typeof(result13);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer14"></div>
+    <script>
+        let result14 = null + 40;
+
+        document.getElementById("answer14").textContent = result14 + ' | ' + typeof(result14);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer15"></div>
+    <script>
+        let result15 = null == undefined;
+
+        document.getElementById("answer15").textContent = result15 + ' | ' + typeof(result15);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer16"></div>
+    <script>
+        let result16 = 0 && '' && [];
+
+        document.getElementById("answer16").textContent = result16 + ' | ' + typeof(result16);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer17"></div>
+    <script>
+        let a17 = ['', 0, {}, undefined, null, false, NaN];
+        let result17 = '';
+
+        a17.forEach((value) => {
+            result17 += value == false;
+            result17 += ' = ' + value + ' | ';
+        });
+
+
+        document.getElementById("answer17").textContent = result17;
+    </script>
+
+
+    <h2>???</h2>
+    <div id="answer18"></div>
+    <script>
+        let result18 = isNaN('');
+
+        document.getElementById("answer18").textContent = result18 + ' | ' + typeof(result18);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer19"></div>
+    <script>
+        let result19 = function() {};
+
+        document.getElementById("answer19").textContent = result19 + ' | ' + typeof(result19);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer20"></div>
+    <script>
+        let result20 = Boolean('0') == Boolean(0);
+
+        document.getElementById("answer20").textContent = result20 + ' | ' + typeof(result20);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer21"></div>
+    <script>
+        let result21 = alert;
+
+        document.getElementById("answer21").textContent = result21 + ' | ' + typeof(result21);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer22"></div>
+    <script>
+        let result22 = alert;
+
+        document.getElementById("answer22").textContent = 'NaN';
+    </script>
+
+    <h2>???</h2>
+    <div id="answer23"></div>
+    <script>
+        let result23 = alert;
+
+        document.getElementById("answer23").textContent = 'NaN';
+    </script>
+
+    <h2>???</h2>
+    <div id="answer24"></div>
+    <script>
+        let result24 = Symbol('JS');
+
+        console.log(result24);
+        console.log(typeof(result24))
+
+        //document.getElementById("answer24").textContent = result24 + ' | ' + typeof(result24);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer25"></div>
+    <script>
+        let result25 = Infinity;
+
+        document.getElementById("answer25").textContent = result25 + ' | ' + typeof(result25);
+    </script>
+
+
+    <h2>???</h2>
+    <div id="answer26"></div>
+    <script>
+        let result26 = 22 - '1';
+
+        document.getElementById("answer26").textContent = result26 + ' | ' + typeof(result26);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer27"></div>
+    <script>
+        let result27 = '123' == 123;
+
+        document.getElementById("answer27").textContent = result27 + ' | ' + typeof(result27);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer28"></div>
+    <script>
+        let result28 = null;
+
+        document.getElementById("answer28").textContent = result28 + ' | ' + typeof(result28);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer29"></div>
+    <script>
+        let result29 = {} == {};
+
+        document.getElementById("answer29").textContent = result29 + ' | ' + typeof(result29);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer30"></div>
+    <script>
+        let result30 = 2 + '2';
+
+        document.getElementById("answer30").textContent = result30 + ' | ' + typeof(result30);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer31"></div>
+    <script>
+        let result31 = typeof(function() {})();
+
+        document.getElementById("answer31").textContent = result31 + ' | ' + typeof(result31);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer32"></div>
+    <script>
+        let result32 = true - 'hello';
+
+        document.getElementById("answer32").textContent = result32 + ' | ' + typeof(result32);
+    </script>
+
+
+    <h2>???</h2>
+    <div id="answer33"></div>
+    <script>
+        let result33 = '???';
+
+        document.getElementById("answer33").textContent = result33 + ' | ' + typeof(result33);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer34"></div>
+    <script>
+        let result34 = '???';
+
+        document.getElementById("answer34").textContent = result34 + ' | ' + typeof(result34);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer35"></div>
+    <script>
+        let result35 = '???';
+
+        document.getElementById("answer35").textContent = result35 + ' | ' + typeof(result35);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer36"></div>
+    <script>
+        let result36 = '???';
+
+        document.getElementById("answer36").textContent = result36 + ' | ' + typeof(result36);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer37"></div>
+    <script>
+        let result37 = '???';
+
+        document.getElementById("answer37").textContent = result37 + ' | ' + typeof(result37);
+    </script>
+
+    <h2>???</h2>
+    <div id="answer38"></div>
+    <script>
+        let result38 = '???';
+
+        document.getElementById("answer38").textContent = result38 + ' | ' + typeof(result38);
+    </script>
+
+</body>
+
+</html>
