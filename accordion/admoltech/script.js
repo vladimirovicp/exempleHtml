@@ -2,31 +2,24 @@ let accordionAdmoltech = document.getElementById('accordion-admoltech');
 accordionAdmoltech.addEventListener('click', change);
 
 function change(event) {
-    //let targ = event.target;
+    let targ = event.target;
+
+    //console.log(targ);
 
     //console.log(event.target.className);
 
-    let info = event.target.className;
+    let info = targ.className;
     if (info !== 'accordion-admoltech_info') return;
 
-    console.log(event.target);
 
-    if (event.target.classList.contains('select')) {
+    if (targ.classList.contains('select')) {
         hideAll();
     } else {
         hideAll();
         //targ.classList.add('select');
-        info.classList.add('select');
-        showText(event.target.nextElementSibling);
+        targ.classList.add('select');
+        showText(targ.nextElementSibling);
     }
-
-    // if (targ.classList.contains('select')) {
-    //     hideAll();
-    // } else {
-    //     hideAll();
-    //     targ.classList.add('select');
-    //     showText(targ.nextElementSibling);
-    // }
 }
 
 function hideAll() {
