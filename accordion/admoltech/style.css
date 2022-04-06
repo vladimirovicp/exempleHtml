@@ -1,25 +1,25 @@
 
+body{
+    background: #e5e5e5;
+}
+
+
 #accordion-admoltech {
     width: 1000px;
     margin: 20px auto;
+    color: #000;
 }
 #accordion-admoltech > .accordion-admoltech_info {
-    color: blue;
     cursor: pointer;
     margin: 5px 0;
-    padding: .5em .5em .5em .7em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    border: 1px solid #c5c5c5;
-    background: #f6f6f6;
+    padding: .5em 1em .5em 1em;
+    border-radius: 10px;
+    background: #fff;
     font-weight: normal;
-    color: #454545;
 }
-#accordion-admoltech > .accordion-admoltech_info.select {
-    border: 1px solid #003eff;
-    background: #007fff;
-    font-weight: normal;
-    color: #ffffff;
+
+#accordion-admoltech > .accordion-admoltech_info h2{
+    color: #013364;
 }
 #accordion-admoltech > .accordion-admoltech_tabs__text {
     height: 0;
@@ -29,7 +29,20 @@
     padding-right: 15px;
     transition: height 1s;
 }
-.accordion-admoltech_tabs__text {
-    font: 12px Arial;
-    text-align: justify;
+
+.arrow-accordion-admoltech{
+    display: flex;
+}
+
+.select .arrow-accordion-admoltech span{
+    transform: rotate(-180deg) translate(0, 0%);
+}
+
+.arrow-accordion-admoltech span{
+    width: 30px;
+    height: 31px;
+    display: block;
+    margin-left: auto;
+    background-image: url("button-accordion-admoltech.png");
+    transition: 0.5s;
 }
