@@ -1,0 +1,91 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.carousel-wrapper{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 850px;
+    overflow: hidden;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+#carousel-btn-left,
+#carousel-btn-right{
+    
+    width: 52px;
+    height: 52px;
+    border: 1px solid #f1cdb3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#carousel-btn-left span,
+#carousel-btn-right span
+{
+    background-image: url(./images/arrow.svg);
+    width: 15px;
+    height: 6px;
+    display: block;
+}
+
+#carousel-btn-left span{
+    transform: rotate(180deg);
+}
+
+.carousel{
+    position: relative;
+    left: -850px;
+}
+
+.item, .carousel, .card{
+    display: flex;
+}
+
+.item{
+    gap: 20px;
+}
+
+.card{
+    width: 270px;
+}
+
+
+
+@keyframes move-right {
+    from {
+        left: - 850px;
+    }
+    to {
+        left: -1700px;
+    }
+}
+
+@keyframes move-left {
+    from {
+        left: -850px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.transition-right{
+    animation-name: move-right;
+    animation-duration: 5s;
+}
+
+.transition-left{
+    animation-name: move-left;
+    animation-duration: 5s;
+}
+
