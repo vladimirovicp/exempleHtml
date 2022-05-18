@@ -9,7 +9,8 @@
 }
 
 html {
-    font-family: '', sans-serif;
+    /* font-family: '', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.69445vw;
     /* 2rem = 20px;  .2rem = 2px*/
     font-style: normal;
@@ -132,6 +133,6 @@ samp {
 }
 
 .container {
-    width: 110rem;
+    width: 111rem;
     margin: 0 auto;
 }

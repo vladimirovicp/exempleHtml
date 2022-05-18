@@ -1,0 +1,57 @@
+/*font-family: 'Tinos', serif;*/
+
+
+/* font-family: 'Cookie', cursive; */
+
+.header {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 10rem;
+    height: 6.8rem;
+}
+
+.header_information {
+    display: flex;
+}
+
+.header__menu {
+    display: flex;
+    margin-right: 3.6rem;
+}
+
+.header__menu li:not(:last-child) {
+    margin-right: 2.3rem;
+}
+
+.header__buy {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.header_number {
+    display: flex;
+}
+
+.header__tel {
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.header__button {
+    margin-left: 4.5rem;
+}
+
+.header__burger {
+    display: none;
+}
