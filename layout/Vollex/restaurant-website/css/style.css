@@ -3,6 +3,19 @@
 
 /* font-family: 'Cookie', cursive; */
 
+
+/* header */
+
+.button {
+    padding: 1.4rem 1.9rem;
+    background-color: #ff7400;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 136%;
+    text-transform: uppercase;
+}
+
 .header {
     position: absolute;
     top: 5rem;
@@ -14,6 +27,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #fff;
+    font-size: 1.4em;
 }
 
 .header__logo {
@@ -23,11 +38,18 @@
 
 .header_information {
     display: flex;
+    align-items: center
 }
 
 .header__menu {
     display: flex;
+}
+
+.header__menu li a {
+    font-size: 1.4rem;
     margin-right: 3.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .header__menu li:not(:last-child) {
@@ -37,15 +59,47 @@
 .header__buy {
     width: 1.3rem;
     height: 1.3rem;
+    position: relative;
+}
+
+.header__buy:after {
+    content: '';
+    width: 0.1rem;
+    height: 5.1rem;
+    background-color: #fff;
+    position: absolute;
+    right: -2.1rem;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 .header_number {
     display: flex;
 }
 
+.header_number span {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+.header__telephote {
+    margin-left: 5.2rem;
+    max-width: 20rem;
+}
+
 .header__tel {
     width: 2.3rem;
     height: 2.3rem;
+    margin-right: .8rem;
+}
+
+.header__text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.36;
+    color: #fff;
 }
 
 .header__button {
@@ -54,4 +108,117 @@
 
 .header__burger {
     display: none;
+}
+
+
+/* hero */
+
+.hero {
+    min-height: 80rem;
+    background: url(../img/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 32.2rem;
+}
+
+.hero__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 54rem;
+}
+
+.hero__subtext {
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    color: #D67E35;
+    line-height: 1.14;
+    font-size: 5rem;
+}
+
+.hero__header {
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 1.15;
+    color: #D67E35;
+    margin-bottom: 1.2rem;
+}
+
+.hero__suptext {
+    position: relative;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.39;
+    color: #fff;
+    margin-bottom: 2.1rem;
+}
+
+.hero__suptext::after,
+.hero__suptext::before {
+    content: "";
+    display: block;
+    width: 6.1rem;
+    height: .2rem;
+    background-color: #c4c4c4;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.hero__suptext::after {
+    left: -8rem;
+}
+
+.hero__suptext::before {
+    right: -8rem;
+}
+
+@media (max-width: 80em) {
+    html {
+        font-size: 0.765vw;
+    }
+}
+
+@media (max-width: 48em) {
+    html {
+        font-size: 1.5625vw;
+        /* 5/(320/100) */
+    }
+    .container {
+        padding: 0 4rem;
+        width: 100%;
+    }
+    .header {
+        width: 100%;
+    }
+    .header_information {
+        display: none;
+    }
+    .header__burger {
+        display: block;
+    }
+    .hero {
+        background: url(../img/hero-mob-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 43.3rem;
+        min-height: 120rem;
+    }
+    .hero__suptext {
+        font-size: 3rem;
+        margin-bottom: 9rem;
+    }
+    .hero__suptext::after,
+    .hero__suptext::before {
+        display: none;
+    }
+    .hero__button {
+        font-size: 2.8rem;
+        padding: 2.8rem 9rem;
+    }
 }
