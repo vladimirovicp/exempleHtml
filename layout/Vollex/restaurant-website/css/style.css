@@ -16,6 +16,10 @@
     text-transform: uppercase;
 }
 
+.title span {
+    color: #BC9060;
+}
+
 .header {
     position: absolute;
     top: 5rem;
@@ -177,6 +181,45 @@
     right: -8rem;
 }
 
+
+/* advanteges */
+
+.advanteges__wraper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15rem;
+    margin-top: -11rem;
+}
+
+.advanteges__item {
+    width: 34.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.8rem 2rem 5.4rem;
+    text-align: center;
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 115%;
+    background-color: #fff;
+    box-shadow: 1rem 1rem 4rem 2rem rgb(0, 0, 0, 0.1);
+}
+
+.advanteges__icon {
+    width: 8.7rem;
+    height: 8.7rem;
+}
+
+.advanteges__header {
+    margin-bottom: 2rem;
+    color: #2C2C2C;
+}
+
+.advanteges__text {
+    color: #656363;
+}
+
 @media (max-width: 80em) {
     html {
         font-size: 0.765vw;
@@ -220,5 +263,28 @@
     .hero__button {
         font-size: 2.8rem;
         padding: 2.8rem 9rem;
+    }
+    /* advanteges */
+    .advanteges__wraper {
+        flex-direction: column;
+    }
+    .advanteges__item {
+        width: 100%;
+        min-height: 53rem;
+    }
+    .advanteges__item:not(:last-child) {
+        margin-bottom: 2.8rem;
+    }
+    .advanteges__icon {
+        width: 17rem;
+        height: 17rem;
+    }
+    .advanteges__header {
+        font-size: 4rem;
+        margin-bottom: 6rem;
+    }
+    .advanteges__text {
+        font-size: 3.4rem;
+        line-height: 140%;
     }
 }
