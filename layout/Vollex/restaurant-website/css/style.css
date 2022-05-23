@@ -305,12 +305,57 @@
 /* holiday */
 
 .holiday {
+    position: relative;
     padding-top: 8rem;
     padding-bottom: 10.4rem;
+    background: url('../img/zakaz.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.holyday__wrapper::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    inset: 0;
+    /*top: 0 left: 0 right: 0 и button: 0 */
+    z-index: 0;
+}
 
-/* 06 Holyday 2:59 */
+.holiday .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.holiday__description {
+    width: 66rem;
+}
+
+.holiday__header {
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    font-size: 5.2rem;
+    line-height: 6rem;
+    color: #D67E34;
+    margin-bottom: 2rem;
+}
+
+.holyday__text {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.375;
+    color: #FFFFFF;
+}
+
+.holyday__button {
+    align-self: center;
+}
 
 @media (max-width: 80em) {
     html {
@@ -414,5 +459,26 @@
     .history__img-2 {
         width: 38rem;
         height: 50rem;
+    }
+    /* holiday */
+    .holiday .container {
+        flex-direction: column;
+    }
+    .holiday__description {
+        width: 100%;
+    }
+    .holiday__header {
+        font-size: 6rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .holyday__text {
+        font-size: 4.8rem;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .holyday__button {
+        font-size: 2.8rem;
+        padding: 2.5rem 2rem;
     }
 }
