@@ -1,0 +1,64 @@
+/*
+Aleo
+
+font-style: normal;
+font-weight: 400;
+
+font-style: italic;
+font-weight: 400;
+
+font-style: italic;
+font-weight: 700;
+
+font-style: normal;
+font-weight: 700;
+
+
+Red Hat Text
+
+font-style: normal;
+font-weight: 500;
+
+Magra
+font-style: normal;
+font-weight: 600;
+
+
+
+font-family: 'Aleo', serif;
+font-family: 'Magra', sans-serif;
+font-family: 'Red Hat Text', sans-serif;
+
+*/
+
+.header{
+    position: relative;
+    height: 9rem;
+    background-image: url("../img/jpg/bg-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.header__wrapper::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 120, 92, 0.70);
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.header .container{
+    z-index: 10;
+}
+
+.preview{
+    height: 67.5rem;
+    background-image: url("../img/jpg/bg-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: center -9rem;
+    background-size: cover;
+}
