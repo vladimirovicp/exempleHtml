@@ -449,15 +449,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 35rem;
+    width: 35rem;
+    /* max-width: 35rem; */
     background-color: #fff;
     padding: 8rem 6.2rem 3rem;
+    text-align: center;
 }
 
 .menu__plash {
     position: absolute;
-    /* width: 12.4rem;
-    height: 3.6rem; */
     text-align: center;
     padding: .8rem 1.1rem;
     top: 0;
@@ -469,8 +469,59 @@
     text-transform: uppercase;
 }
 
+.menu__top {
+    position: relative;
+}
 
-/* 06:28 */
+.menu__img {
+    width: 22.5rem;
+    height: 22.5rem;
+    border-radius: 50%;
+    margin-bottom: 2.2rem;
+}
+
+.menu__weight {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+    background: #D67E34;
+    border-radius: 50%;
+    border: 1rem solid #FFFFFF;
+    font-family: 'Cookie', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.1;
+    position: absolute;
+    right: -1rem;
+    bottom: 2rem;
+}
+
+.menu__subheader {
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin-bottom: 1.7rem;
+}
+
+.menu__text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.38;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.menu__button {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.375;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.25);
+}
 
 @media (max-width: 80em) {
     html {
@@ -638,5 +689,50 @@
     .dish__img-s {
         width: 23rem;
         height: 23rem
+    }
+    /* menu */
+    .menu {
+        height: 125rem;
+    }
+    .menu__header {
+        margin-bottom: 7rem;
+        font-size: 9rem;
+    }
+    .menu__wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .menu__item {
+        width: 100%;
+        padding: 16rem 6.2rem 6rem;
+    }
+    .menu__item:nth-child(2),
+    .menu__item:nth-child(3) {
+        display: none;
+    }
+    .menu__img {
+        width: 40rem;
+        height: 40rem;
+    }
+    .menu__subheader {
+        font-size: 5rem;
+    }
+    .menu__text {
+        font-size: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .menu__button {
+        font-size: 3rem;
+        padding: 2rem 11.8rem;
+    }
+    .menu__weight {
+        width: 15rem;
+        height: 15rem;
+        font-size: 6rem;
+    }
+    .menu__plash {
+        font-size: 2.6rem;
+        padding-left: 1.8rem 3rem;
     }
 }
