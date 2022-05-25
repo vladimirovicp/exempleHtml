@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/default-style.css">
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -17,14 +18,22 @@
     <header class="header">
         <div class="header__wrapper">
             <div class="container">
-                <a href="" class="logo"></a>
+                <a href="#" class="header__logo logo">
+                    <div class="header__logo-img">
+                            <img src="./img/svg/logo.svg" alt="logo Travel">
+                    </div>
+                    <div class="header__logo-text">
+                        Travel Portal
+                    </div>
 
-                <nav>
-                    <ul>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Plan Your Trip</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">Travel Stories</a></li>
+                </a>
+
+                <nav id="main-menu" class="nav header__nav">
+                    <ul class="header__nav-list nav-list">
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">How It Works</a></li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">Plan Your Trip</a></li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">Destinations</a></li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">Travel Stories</a></li>
                     </ul>
                 </nav>
                 <button type="button" class="header__button button">Login</button>
@@ -36,7 +45,12 @@
         <section class="preview">
             <div class="preview__wrapper">
                 <div class="container">
-                    <h1>Explore the beauty of the World</h1>
+                    <h1 class="preview__title">Explore the beauty of the World</h1>
+                    <p class="preview__text">Recieve personalized recommendations for countries, hotels, activities and more</p>
+                    <form class="search">
+                        <input id="tel" type="search" placeholder="What would you like to do?" />
+                        <button class="button preview__button">Start Planning</button>
+                    </form>
                 </div>
             </div>
         </section>
