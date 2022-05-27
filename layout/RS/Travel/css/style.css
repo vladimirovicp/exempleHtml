@@ -223,12 +223,29 @@ font-family: 'Red Hat Text', sans-serif;
 .destinations__slide{
     width: 80rem;
     height: 80rem;
+    padding: 0 3rem;
 }
 
-/*.destinations__slide-content{*/
-/*    width: 80rem;*/
-/*    height: 80rem;*/
-/*}*/
+.destinations__slide-content{
+    position: relative;
+}
+
+.destinations__slide-img{
+    /*width: 80rem;*/
+    /*height: 80rem;*/
+}
+
+.destinations__slide-text{
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1.3;
+    color: #FFFFFF;
+
+    position: absolute;
+    bottom: 4rem;
+    left: 1.5rem;
+}
 
 
 
