@@ -7,4 +7,15 @@
     padding: 1rem 3rem;
     box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25), 0 .2rem .3rem rgba(13, 96, 111, 0.16);
     border-radius: 1rem;
+    color: #fff;
+}
+
+.title{
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1.325;
+    color: #F2785C;
+    text-align: center;
+    text-transform: uppercase;
 }
