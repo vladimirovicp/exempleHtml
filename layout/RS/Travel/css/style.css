@@ -31,6 +31,8 @@ font-family: 'Red Hat Text', sans-serif;
 
 */
 
+
+
 .header{
     position: relative;
     background-image: url("../img/jpg/bg-preview.jpg");
@@ -245,6 +247,39 @@ font-family: 'Red Hat Text', sans-serif;
     position: absolute;
     bottom: 4rem;
     left: 1.5rem;
+}
+
+.destinations__swiper .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(242, 120, 92, 0.5);
+}
+
+.destinations__swiper .swiper-pagination-bullet-active {
+    background-color: rgba(242, 120, 92, 1);
+}
+
+.destinations__slide{
+    margin-bottom: calc(2.4rem + 10px);
+}
+
+.destinations__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.destinations__center-button{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.destinations__button{
+
+}
+
+.stories{
+    padding-top: 8rem;
 }
 
 
