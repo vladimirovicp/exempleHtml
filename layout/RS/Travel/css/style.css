@@ -98,8 +98,13 @@ font-family: 'Red Hat Text', sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.3;
-
     color: #FFFFFF;
+}
+
+.header__button{
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    line-height: 1.3;
 }
 
 .preview{
@@ -159,8 +164,7 @@ font-family: 'Red Hat Text', sans-serif;
 }
 
 .preview__button{
-    font-size: 2.4rem;
-    padding: 1.35rem 3.25rem;
+
 }
 
 .steps{

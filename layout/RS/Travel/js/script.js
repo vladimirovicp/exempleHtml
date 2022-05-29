@@ -10,5 +10,5 @@ const swiper = new Swiper('.destinations__swiper', {
     watchSlidesVisibility: true,
 
    // Свободнфй режим
-    freeMode: true,
+   //  freeMode: true,
 });
