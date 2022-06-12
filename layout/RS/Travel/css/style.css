@@ -249,13 +249,13 @@ font-family: 'Red Hat Text', sans-serif;
     margin-bottom: 4.6rem;
 }
 
-.destinations__swiper{
-    padding-bottom: 2.4rem;
-}
+/*.destinations__swiper{*/
+/*    padding-bottom: 2.4rem;*/
+/*}*/
 
 .destinations__slide{
-    width: 80rem;
-    height: 80rem;
+    /*width: 80rem;*/
+    /*height: 80rem;*/
     padding: 0 3rem;
 }
 
@@ -266,6 +266,10 @@ font-family: 'Red Hat Text', sans-serif;
 .destinations__slide-img{
     /*width: 80rem;*/
     /*height: 80rem;*/
+}
+
+.destinations__slide-img img{
+    border-radius: 1.6rem;
 }
 
 .destinations__slide-text{
@@ -291,7 +295,7 @@ font-family: 'Red Hat Text', sans-serif;
 }
 
 .destinations__slide{
-    margin-bottom: calc(2.4rem + 10px);
+    /*margin-bottom: calc(2.4rem + 10px);*/
 }
 
 .destinations__pagination {
@@ -305,16 +309,18 @@ font-family: 'Red Hat Text', sans-serif;
 /*    margin-top: 4rem;*/
 /*}*/
 
-.destinations .center-button{
-    margin-top: 2.4rem;
-}
+/*.destinations .center-button{*/
+/*    margin-top: 2.4rem;*/
+/*}*/
 
 .destinations__button{
 
 }
 
 .destinations__pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: 0;
+    bottom: auto;
+    position: relative;
+    padding-top: 2.2rem;
 }
 
 .stories{
@@ -351,13 +357,17 @@ font-family: 'Red Hat Text', sans-serif;
 }
 
 .stories__header{
-    margin-bottom: 4rem;
+    margin-bottom: 3.4rem;
 }
 
 .stories__item{
     display: flex;
     justify-content: space-between;
     margin-bottom: 3rem;
+}
+
+.stories .center-button{
+    margin-top:5rem
 }
 
 .stories__img{
@@ -381,6 +391,7 @@ font-family: 'Red Hat Text', sans-serif;
 .store__info-header{
     font-size: 3.5rem;
     margin-bottom: 2.4rem;
+    margin-top: 1rem;
 }
 
 .store__info-text{
