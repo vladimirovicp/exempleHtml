@@ -47,3 +47,12 @@
     margin-top: 4rem;
 }
 
+
+@media (min-width: 1440px ){
+    html {
+        font-size: 10px;
+    }
+}
+
+
+
