@@ -33,7 +33,8 @@ a:hover{
 }
 
 .button:hover{
-    color: rgba(242, 120, 92, 0.70);
+    /*color: rgba(242, 120, 92, 0.70);*/
+    color: #F2785C;
 }
 
 .button-arrow{
@@ -59,7 +60,7 @@ a:hover{
 }
 
 .button-arrow:hover::before{
-    filter: brightness(0) saturate(100%) invert(60%) sepia(7%) saturate(4275%) hue-rotate(322deg) brightness(98%) contrast(93%);
+    filter: brightness(0) saturate(100%) invert(63%) sepia(78%) saturate(2087%) hue-rotate(322deg) brightness(99%) contrast(92%);
 }
 
 .center-button{

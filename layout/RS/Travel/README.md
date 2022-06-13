@@ -22,3 +22,5 @@
 ### font-family: 'Magra', sans-serif;
 > font-style: normal;
 > font-weight: 600;
+
+https://angel-rs.github.io/css-color-filter-generator/

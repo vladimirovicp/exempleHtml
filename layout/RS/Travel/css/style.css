@@ -36,6 +36,14 @@
     color: #0D606F;
 }
 
+.logo img{
+    transition: 0.5s;
+}
+
+.logo:hover img{
+    filter: brightness(0) saturate(100%) invert(28%) sepia(11%) saturate(7321%) hue-rotate(157deg) brightness(89%) contrast(90%);
+}
+
 .header__logo{
     display: flex;
     align-items: center;
