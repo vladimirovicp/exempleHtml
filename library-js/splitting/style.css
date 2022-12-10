@@ -1,0 +1,23 @@
+.mainsplit1.word{
+
+}
+
+/*https://www.youtube.com/watch?v=ySrbvSf0xiA*/
+
+.mainsplit1.word .char{
+    animation: slider-down 2s forwards;
+    animation-delay: calc(.5s + (.1s * var(--char-index)));
+    opacity: 0;
+
+}
+
+@keyframes slider-down {
+    from{
+        transform: translateY(125%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
